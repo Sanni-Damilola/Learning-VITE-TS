@@ -33,6 +33,12 @@ export const registerCompany = async (req: Request, res: Response) => {
         message: "Missing (email, password, confirmPassword) in request",
       });
     }
+    if (createCompany) {
+      return res.status(200).json({
+        message: "company created succefully",
+        data: createCompany,
+      });
+    }
   } catch (error) {
     console.log("An Error Occured In registerUser", error);
   }
