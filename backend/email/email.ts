@@ -4,8 +4,8 @@ import path from "path";
 import ejs from "ejs";
 
 const google_id: string =
-  "367762056277-jtls6icdrtvdrpu29988a4p41cebi5r8.apps.googleusercontent.com";
-const google_secret: string = "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";
+  "943490369101-13cbn4sk4bns9n3qc31bqj1phh83li6k.apps.googleusercontent.com";
+const google_secret: string = "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";
 const google_refreshToken: string =
   "1//04YoJleOkdG4KCgYIARAAGAQSNwF-L9Irvv5dLJgkpVUJzA1dQarkpAJJdUjacWznZgnxjTPERSOtxKxHZ2xW-dWDViQGr8z6nvY";
 const google_redirectToken: string =
@@ -39,8 +39,10 @@ export const verifyCompanyAccount = async (registerCompany: any) => {
       },
     });
 
-    const readEjs = path.join(__dirname, "../views/body");
-    const data = ejs.renderFile(readEjs, {});
+    const readEjs = path.join(__dirname, "../views/body.ejs");
+    const data = ejs.renderFile(readEjs, {
+      registerCompany,
+    });
 
     const mailerOptions: any = {
       from: "lyfCare <sannifortune11@gmail.com>", // sender address
