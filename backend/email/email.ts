@@ -39,8 +39,9 @@ export const verifyCompanyAccount = async (registerCompany: any) => {
       },
     });
 
+    const { rcNumber, name, OTP } = registerCompany;
     const readEjs = path.join(__dirname, "../views/body.ejs");
-    const data = ejs.renderFile(readEjs, {
+    const data = await ejs.renderFile(readEjs, {
       registerCompany,
     });
 
