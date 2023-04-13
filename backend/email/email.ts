@@ -49,7 +49,7 @@ export const verifyCompanyAccount = async (registerCompany: any) => {
       to: registerCompany?.email, // list of receivers
       subject: "Hello ✔", // Subject line
       text: "Verifiy Your Account", // plain text body
-      html: data, // html body
+      html: JSON.stringify(data), // html body
     };
 
     transporter
