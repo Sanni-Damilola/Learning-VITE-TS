@@ -2,26 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import Card from "../../components/Card";
 
-const Register = () => {
+const Signin = () => {
   return (
     <Container>
       <Card
-        req={true}
-        sign={true}
+        req={false}
+        sign={false}
+        path="/register"
+        route="Create One"
+        text="Don't Have an Account Signin"
         inputTitle="email"
         inputTitle1="password"
         inputTitle2="confirm password"
         onClick={() => {
           console.log("Sanni");
         }}
-        buttonTitle="Sign Up"
-        title="Sign Up"
+        buttonTitle="Sign In"
+        title="Sign In"
       />
     </Container>
   );
 };
 
-export default Register;
+export default Signin;
 
 const Container = styled.div`
   display: flex;

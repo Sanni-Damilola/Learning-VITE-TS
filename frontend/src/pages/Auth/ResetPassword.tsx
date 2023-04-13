@@ -2,17 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import Card from "../../components/Card";
 
-const Register = () => {
+const ResetPassword = () => {
   return (
     <Container>
       <Card
-        req={true}
-        sign={true}
+        req={false}
+        sign={false}
         inputTitle="email"
         inputTitle1="password"
-        path="/signin"
-        route="Sign In"
-        text="Already Have an Account"
         inputTitle2="confirm password"
         onClick={() => {
           console.log("Sanni");
@@ -24,7 +21,7 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default ResetPassword;
 
 const Container = styled.div`
   display: flex;

@@ -11,6 +11,9 @@ export interface ICard {
   inputTitle: string;
   inputTitle1?: string;
   inputTitle2?: string;
+  route?: string;
+  path?: string;
+  text?: string;
   sign: boolean;
   req: boolean;
 }
