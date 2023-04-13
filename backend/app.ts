@@ -18,6 +18,7 @@ export const appConfig = (app: Application) => {
       res.status(200).json({
         message: "Api Up ✔💕❤💖",
       });
+        
     })
 
     .use("/view", (req: Request, res: Response) => {
