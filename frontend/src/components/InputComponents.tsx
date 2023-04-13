@@ -9,9 +9,6 @@ const InputComponents: React.FC<IInput> = ({
   title1,
   title2,
 }) => {
-  // const [sign, setSign] = React.useState(true);
-  // const [req, setReq] = React.useState(false);
-
   return (
     <Container>
       <Input placeholder={title} />
