@@ -1,10 +1,17 @@
-import { Application, Request, Response } from "express";
+import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import ejs from "ejs";
 
 export const appConfig = (app: Application) => {
-  app.use(cors()).use(morgan("dev")).set("view engine", "ejs");
+  app
+    .use(cors())
+    .use(morgan("dev"))
+    .set("view engine", "ejs")
+    .use(express.json())
+    .use(express.static("public"))
+    .use(express.static(`${__dirname} public/asset`))
+    .use(express.static(`${__dirname} public/css`));
 
   app
     .get("/", (req: Request, res: Response) => {
@@ -12,6 +19,7 @@ export const appConfig = (app: Application) => {
         message: "Api Up ✔💕❤💖",
       });
     })
+
     .use("/view", (req: Request, res: Response) => {
       res.render("index");
     });
