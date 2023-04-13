@@ -2,6 +2,7 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import morgan from "morgan";
 import ejs from "ejs";
+import router from "./routes/route";
 
 const data = {
   name: "sanni",
@@ -28,7 +29,9 @@ export const appConfig = (app: Application) => {
 
     .use("/view", (req: Request, res: Response) => {
       res.render("index", data);
-    });
+    })
+
+    .use("/api", router);
 
   app.all("*", (req: Request, res: Response) => {
     res.status(404).json({

@@ -1,7 +1,7 @@
 import { google } from "googleapis";
 import nodemailer from "nodemailer";
-import path from "path"
-import ejs from "ejs"
+import path from "path";
+import ejs from "ejs";
 
 const google_id: string =
   "367762056277-jtls6icdrtvdrpu29988a4p41cebi5r8.apps.googleusercontent.com";
@@ -38,22 +38,16 @@ export const verifyCompanyAccount = async (registerCompany: any) => {
           "ya29.a0Ael9sCMqVXtfF4DKa22IxmQK7S1e8aVRh55AhMGHzKC9hIJZmVNLAOvajT-IfVianCVDLQBATCGtzT16WOphUJ8p2tX3zDlPD2ylOICak_pVD2EPBuuSTT3lJHgkX36CGjqCCNPBpA6mQ38jmSq5CHLF4SzbaCgYKAd4SARASFQF4udJhhAMUCkwl1wW1pVSfSQEprQ0163",
       },
     });
-      
-      const readEjs = path.join(__dirname, "../views/body")
-      const data = ejs.renderFile(readEjs, {
-          
-      })
 
-    const mailerOptions = {
+    const readEjs = path.join(__dirname, "../views/body");
+    const data = ejs.renderFile(readEjs, {});
+
+    const mailerOptions: any = {
       from: "lyfCare <sannifortune11@gmail.com>", // sender address
       to: registerCompany?.email, // list of receivers
       subject: "Hello ✔", // Subject line
       text: "Verifiy Your Account", // plain text body
-      html: `<b>Welcome ${registerCompany?.name} here is your OTP : ${registerCompany?.OTP}
-      <a href="http://localhost/2001/verified" >
-      click to verified
-      </a>
-      </b>`, // html body
+      html: data, // html body
     };
 
     transporter
