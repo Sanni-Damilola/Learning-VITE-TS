@@ -20,7 +20,7 @@ export const mainRouter = createBrowserRouter([
         element: <Signin />,
       },
       {
-        path: "register",
+        path: "reset",
         element: <ResetPassword />,
       },
     ],

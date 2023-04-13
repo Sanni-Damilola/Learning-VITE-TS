@@ -17,12 +17,17 @@ const Card: React.FC<ICard> = ({
   route,
   text,
   path,
+  route1,
+  text1,
+  path1,
+  call,
 }) => {
   return (
     <Container>
       <Text>{title}</Text>
       <Form>
         <InputComponents
+          
           title1={inputTitle1}
           title2={inputTitle2}
           sign={sign}
@@ -39,6 +44,11 @@ const Card: React.FC<ICard> = ({
         <Content>
           {text}, <Span to={`${path}`}>{route}</Span>
         </Content>
+        {call ? (
+          <Content>
+            {text1}, <Span to={`${path1}`}>{route1}</Span>
+          </Content>
+        ) : null}
       </Form>
     </Container>
   );

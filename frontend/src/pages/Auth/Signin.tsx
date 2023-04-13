@@ -6,11 +6,15 @@ const Signin = () => {
   return (
     <Container>
       <Card
+        call={true}
         req={false}
         sign={false}
         path="/register"
         route="Create One"
         text="Don't Have an Account"
+        path1="/reset"
+        route1="Request Change here"
+        text1="Forget password?"
         inputTitle="email"
         inputTitle1="password"
         inputTitle2="confirm password"

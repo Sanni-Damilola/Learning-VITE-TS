@@ -7,6 +7,7 @@ const Register = () => {
     <Container>
       <Card
         req={true}
+        call={false}
         sign={true}
         inputTitle="email"
         inputTitle1="password"

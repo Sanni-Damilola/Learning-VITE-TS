@@ -8,10 +8,23 @@ const InputComponents: React.FC<IInput> = ({
   req,
   title1,
   title2,
+  email,
+  setEmail,
+  confirmPassword,
+  setConfirmPassword,
+  password,
+  setPassword,
+  onChange,
 }) => {
   return (
     <Container>
-      <Input placeholder={title} />
+      <Input
+        value={email}
+        onChange={(e) => {
+          setEmail(e.target.value);
+        }}
+        placeholder={title}
+      />
       {sign ? <Input placeholder={title1} /> : null}
       {req ? <Input placeholder={title2} /> : null}
     </Container>

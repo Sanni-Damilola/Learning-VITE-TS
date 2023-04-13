@@ -14,8 +14,12 @@ export interface ICard {
   route?: string;
   path?: string;
   text?: string;
+  route1?: string;
+  path1?: string;
+  text1?: string;
   sign: boolean;
   req: boolean;
+  call: boolean;
 }
 export interface IInput {
   title: string;
@@ -23,4 +27,11 @@ export interface IInput {
   title2?: string;
   sign: boolean;
   req: boolean;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  email: string;
+  setEmail: React.Dispatch<React.SetStateAction<string>>;
+  password: string;
+  setPassword: React.Dispatch<React.SetStateAction<string>>;
+  confirmPassword: string;
+  setConfirmPassword: React.Dispatch<React.SetStateAction<string>>;
 }

@@ -6,6 +6,7 @@ const ResetPassword = () => {
   return (
     <Container>
       <Card
+        call={true}
         req={false}
         sign={false}
         inputTitle="email"
@@ -14,8 +15,11 @@ const ResetPassword = () => {
         onClick={() => {
           console.log("Sanni");
         }}
-        buttonTitle="Sign Up"
+        buttonTitle="Reset Password"
         title="Sign Up"
+        path1="/signin"
+        route1="Sign In"
+        text1="remember? go back to sign in"
       />
     </Container>
   );
