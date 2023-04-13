@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { IButton } from "../types";
 
 const ButtonComponents: React.FC<IButton> = ({ title, bg, color }) => {
   return (

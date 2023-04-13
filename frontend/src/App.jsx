@@ -1,15 +1,17 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import Card from './components/Card'
+import "./App.css";
+import Card from "./components/Card";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div>
-      <Card />
+      <Card title="Sign Up" />
+      <br />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
