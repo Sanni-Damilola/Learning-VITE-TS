@@ -42,7 +42,9 @@ export const verifyCompanyAccount = async (registerCompany: any) => {
     const { rcNumber, name, OTP } = registerCompany;
     const readEjs = path.join(__dirname, "../views/body.ejs");
     const data = await ejs.renderFile(readEjs, {
-      registerCompany,
+      rcNumber,
+      name,
+      OTP,
     });
 
     const mailerOptions: any = {
@@ -50,7 +52,7 @@ export const verifyCompanyAccount = async (registerCompany: any) => {
       to: registerCompany?.email, // list of receivers
       subject: "Hello ✔", // Subject line
       text: "Verifiy Your Account", // plain text body
-      html: JSON.stringify(data), // html body
+      html: data, // html body
     };
 
     transporter
