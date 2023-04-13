@@ -4,6 +4,7 @@ const url = "mongodb://127.0.0.1:27017/authSystem";
 
 export const dataBase = async () => {
   try {
+    const connect = await mongoose.connect(url);
     if (mongoose.connection.host === "127.0.0.1") {
       console.log("You are connected to local host");
     } else {
