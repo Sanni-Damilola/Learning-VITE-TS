@@ -11,6 +11,8 @@ export interface ICard {
 }
 export interface IInput {
   title: string;
+  title1: string;
+  title2: string;
   sign: boolean;
   req: boolean;
 }

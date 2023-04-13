@@ -10,7 +10,13 @@ const Card: React.FC<ICard> = ({ title, buttonTitle, onClick }) => {
       <Text>{title}</Text>
       <Field>
         <Form>
-          <InputComponents  title="name" />
+          <InputComponents
+            title1="password"
+            title2=""
+            sign={true}
+            req={false}
+            title="email"
+          />
           <ButtonComponents
             onClick={onClick}
             bg="purple"
@@ -52,4 +58,7 @@ const Text = styled.div`
 const Field = styled.div`
   flex-direction: column;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;

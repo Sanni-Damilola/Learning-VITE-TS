@@ -2,15 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { IInput } from "../types";
 
-const InputComponents: React.FC<IInput> = ({ title, sign, req }) => {
+const InputComponents: React.FC<IInput> = ({
+  title,
+  sign,
+  req,
+  title1,
+  title2,
+}) => {
   // const [sign, setSign] = React.useState(true);
   // const [req, setReq] = React.useState(false);
 
   return (
     <div>
       <Input placeholder={title} />
-      {sign ? <Input placeholder={title} /> : null}
-      {req ? <Input placeholder={title} /> : null}
+      {sign ? <Input placeholder={title1} /> : null}
+      {req ? <Input placeholder={title2} /> : null}
     </div>
   );
 };
