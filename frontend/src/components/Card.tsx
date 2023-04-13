@@ -37,7 +37,7 @@ const Card: React.FC<ICard> = ({
         />
 
         <Content>
-          {text},<Span to={`${path}`}>Create One</Span>
+          {text}, <Span to={`${path}`}>{route}</Span>
         </Content>
       </Form>
     </Container>

@@ -10,7 +10,7 @@ const Signin = () => {
         sign={false}
         path="/register"
         route="Create One"
-        text="Don't Have an Account Signin"
+        text="Don't Have an Account"
         inputTitle="email"
         inputTitle1="password"
         inputTitle2="confirm password"
