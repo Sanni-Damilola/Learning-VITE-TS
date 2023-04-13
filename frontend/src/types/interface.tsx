@@ -1,12 +1,11 @@
 export interface IButton {
-  title: string;
+  buttonTitle: string;
   color: string;
   bg: string;
 }
 export interface ICard {
   title: string;
-  color: string;
-  bg: string;
+  buttonTitle: string;
 }
 export interface IInput {
   title: string;

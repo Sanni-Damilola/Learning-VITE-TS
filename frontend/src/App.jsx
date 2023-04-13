@@ -2,14 +2,14 @@ import { useState } from "react";
 
 import "./App.css";
 import Card from "./components/Card";
+import Register from "./pages/Auth/Home/Register";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   return (
     <div>
-      <Card title="Sign Up" />
-      <br />
+      <Register />
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { ICard } from "../types";
 import InputComponents from "./InputComponents";
 import ButtonComponents from "./ButtonComponents";
 
-const Card: React.FC<ICard> = ({ title }) => {
+const Card: React.FC<ICard> = ({ title, buttonTitle }) => {
   return (
     <Container>
       <Text>{title}</Text>
@@ -13,7 +13,11 @@ const Card: React.FC<ICard> = ({ title }) => {
           <InputComponents title="name" />
           <InputComponents title="email" />
           <InputComponents title="password" />
-          <ButtonComponents bg="purple" color="" title="Sign Up" />
+          <ButtonComponents
+            bg="purple"
+            color="white"
+            buttonTitle={buttonTitle}
+          />
         </Form>
       </Field>
     </Container>
@@ -24,6 +28,10 @@ export default Card;
 
 const Form = styled.form`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Container = styled.div`

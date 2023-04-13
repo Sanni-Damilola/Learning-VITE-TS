@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { IButton } from "../types";
 
-const ButtonComponents: React.FC<IButton> = ({ title, bg, color }) => {
+const ButtonComponents: React.FC<IButton> = ({ buttonTitle, bg, color }) => {
   return (
     <Button bg={bg} color={color}>
-      <Text>{title}</Text>
+      <Text>{buttonTitle}</Text>
     </Button>
   );
 };
@@ -17,7 +17,7 @@ const Button = styled.div<{ bg: string; color: string }>`
   height: 50px;
   background-color: ${({ bg }) => bg};
   color: ${({ color }) => color};
-  border-radius: 3pc;
+  border-radius: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
