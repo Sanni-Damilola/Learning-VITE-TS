@@ -6,6 +6,11 @@ const Register = () => {
   return (
     <Container>
       <Card
+        req={false}
+        sign={true}
+        inputTitle=""
+        inputTitle1="password"
+        inputTitle2="confirm password"
         onClick={() => {
           console.log("Sanni");
         }}

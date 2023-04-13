@@ -4,27 +4,32 @@ import { ICard } from "../types";
 import InputComponents from "./InputComponents";
 import ButtonComponents from "./ButtonComponents";
 
-const Card: React.FC<ICard> = ({ title, buttonTitle, onClick }) => {
+const Card: React.FC<ICard> = ({
+  title,
+  buttonTitle,
+  onClick,
+  inputTitle1,
+  inputTitle,
+  inputTitle2,
+}) => {
   return (
     <Container>
       <Text>{title}</Text>
-      <Field>
-        <Form>
-          <InputComponents
-            title1="password"
-            title2=""
-            sign={true}
-            req={false}
-            title="email"
-          />
-          <ButtonComponents
-            onClick={onClick}
-            bg="purple"
-            color="white"
-            buttonTitle={buttonTitle}
-          />
-        </Form>
-      </Field>
+      <Form>
+        <InputComponents
+          title1={inputTitle1}
+          title2={inputTitle2}
+          sign={true}
+          req={true}
+          title={inputTitle}
+        />
+        <ButtonComponents
+          onClick={onClick}
+          bg="purple"
+          color="white"
+          buttonTitle={buttonTitle}
+        />
+      </Form>
     </Container>
   );
 };
@@ -54,11 +59,4 @@ const Text = styled.div`
   margin-top: 40px;
   font-size: 40px;
   font-weight: 500;
-`;
-const Field = styled.div`
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 `;

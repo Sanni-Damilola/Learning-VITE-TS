@@ -13,15 +13,23 @@ const InputComponents: React.FC<IInput> = ({
   // const [req, setReq] = React.useState(false);
 
   return (
-    <div>
+    <Container>
       <Input placeholder={title} />
       {sign ? <Input placeholder={title1} /> : null}
       {req ? <Input placeholder={title2} /> : null}
-    </div>
+    </Container>
   );
 };
 
 export default InputComponents;
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
 
 const Input = styled.input`
   outline: none;
