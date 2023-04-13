@@ -1,8 +1,12 @@
 import { Request, Response } from "express";
 
+export const registerUser = async (req: Request, res: Response) => {
+  try {
+      const { email, password, confirmPassword } = req.body;
+      
+      
 
-
-
-export const register = async (req: Request, res: Response) => {
-
-}
+  } catch (error) {
+    console.log("An Error Occured In registerUser", error);
+  }
+};

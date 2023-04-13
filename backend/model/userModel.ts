@@ -7,6 +7,9 @@ interface Iuser {
   token: string;
   staffId: string;
   verified: boolean;
+  OTP: string;
+  rcNumber: string;
+  company: {}[];
 }
 
 interface userModel extends Iuser, mongoose.Document {}
@@ -27,9 +30,21 @@ const userSchema = new mongoose.Schema<Iuser>({
   staffId: {
     type: String,
   },
+  OTP: {
+    type: String,
+  },
+  rcNumber: {
+    type: String,
+  },
+  company: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "company(EJS)",
+    },
+  ],
   verified: {
     type: Boolean,
   },
 });
 
-export default mongoose.model<userModel>("authSystem(EJS)", userSchema);
+export default mongoose.model<userModel>("staff(EJS)", userSchema);
