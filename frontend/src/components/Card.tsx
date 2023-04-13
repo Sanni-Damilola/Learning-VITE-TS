@@ -4,16 +4,15 @@ import { ICard } from "../types";
 import InputComponents from "./InputComponents";
 import ButtonComponents from "./ButtonComponents";
 
-const Card: React.FC<ICard> = ({ title, buttonTitle }) => {
+const Card: React.FC<ICard> = ({ title, buttonTitle, onClick }) => {
   return (
     <Container>
       <Text>{title}</Text>
       <Field>
         <Form>
-          <InputComponents title="name" />
-          <InputComponents title="email" />
-          <InputComponents title="password" />
+          <InputComponents  title="name" />
           <ButtonComponents
+            onClick={onClick}
             bg="purple"
             color="white"
             buttonTitle={buttonTitle}

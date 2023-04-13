@@ -1,11 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "../../../components/Card";
+import Card from "../../components/Card";
 
 const Register = () => {
   return (
     <Container>
-      <Card buttonTitle="Sign Up" title="Sign Up" />
+      <Card
+        onClick={() => {
+          console.log("Sanni");
+        }}
+        buttonTitle="Sign Up"
+        title="Sign Up"
+      />
     </Container>
   );
 };

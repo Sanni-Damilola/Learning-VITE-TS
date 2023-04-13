@@ -2,9 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { IButton } from "../types";
 
-const ButtonComponents: React.FC<IButton> = ({ buttonTitle, bg, color }) => {
+const ButtonComponents: React.FC<IButton> = ({
+  buttonTitle,
+  bg,
+  color,
+  onClick,
+}) => {
   return (
-    <Button bg={bg} color={color}>
+    <Button onClick={onClick} bg={bg} color={color}>
       <Text>{buttonTitle}</Text>
     </Button>
   );

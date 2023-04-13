@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
-import Card from "./components/Card";
-import Register from "./pages/Auth/Home/Register";
+import Register from "./pages/Auth/Signin";
 
 function App() {
   // const [count, setCount] = useState(0);
