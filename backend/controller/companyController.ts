@@ -60,8 +60,11 @@ export const deletAllModel = async (req: Request, res: Response) => {
   try {
     const deleteAllModel = await companyModel.deleteMany();
     return res.status(200).json({
-      message: "Succeffully deleted all Data" + deletAllModel.length,
-      date: deleteAllModel,
+      message:
+        "Succeffully deleted all Data " +
+        `(
+        ${deletAllModel.length}
+      )`,
     });
   } catch (error) {
     console.log("An Error Occured In deletAllModel", error);

@@ -27,6 +27,10 @@ const companySchema = new mongoose.Schema<Iuser>({
   token: {
     type: String,
   },
+  name: {
+    type: String,
+  },
+
   rcNumber: {
     type: String,
   },

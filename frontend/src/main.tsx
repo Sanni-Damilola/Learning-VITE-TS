@@ -13,5 +13,5 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     </ShareState>
 
     {/* <App /> */}
-  </React.StrictMode>,
+  </React.StrictMode>
 );
