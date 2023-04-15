@@ -21,7 +21,7 @@ export const registerCompany = async (req: Request, res: Response) => {
       rcNumber,
     });
     verifyCompanyAccount(createCompany)
-      .then((res) => {
+      .then(() => {
         console.log("Data", res);
       })
       .catch((err) => {

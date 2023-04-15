@@ -7,7 +7,7 @@ const Footer = () => {
         width: "100%",
         height: "200px",
         backgroundColor: "black",
-        color: "white",
+        color: "whitesmoke",
       }}
     >
       Footer

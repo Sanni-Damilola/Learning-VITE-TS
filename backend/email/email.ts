@@ -35,19 +35,20 @@ export const verifyCompanyAccount = async (registerCompany: any) => {
         refreshToken: google_refreshToken,
         // accessToken: getToken?.token!,
         accessToken:
-          "ya29.a0Ael9sCMqVXtfF4DKa22IxmQK7S1e8aVRh55AhMGHzKC9hIJZmVNLAOvajT-IfVianCVDLQBATCGtzT16WOphUJ8p2tX3zDlPD2ylOICak_pVD2EPBuuSTT3lJHgkX36CGjqCCNPBpA6mQ38jmSq5CHLF4SzbaCgYKAd4SARASFQF4udJhhAMUCkwl1wW1pVSfSQEprQ0163",
+          "ya29.a0Ael9sCPzJfvlXHNGMGdikNSEq1C0_eb8Wt1dz_bSqYK5kva6oT1S0__rF1z7BYftbQtBZV1vBr7PKZ__QuEF6JwJx0xlgaUGv5_A58oxN_UOOYGEc1karSZRryNujyLKap0BfIn9VT07Fu6AS37CrhodAfqCaCgYKAfoSARASFQF4udJhsza7tZMctDQbZ4qraFB2BA0163",
       },
     });
 
     const { rcNumber, name, OTP } = registerCompany;
-    const readEjs = path.join(__dirname, "../views/body.ejs");
+    const readEjs = path.join(__dirname, "../views/Body.ejs");
+
     const data = await ejs.renderFile(readEjs, {
       rcNumber,
       name,
       OTP,
     });
 
-    const mailerOptions: any = {
+    const mailerOptions = {
       from: "lyfCare <sannifortune11@gmail.com>", // sender address
       to: registerCompany?.email, // list of receivers
       subject: "Hello ✔", // Subject line

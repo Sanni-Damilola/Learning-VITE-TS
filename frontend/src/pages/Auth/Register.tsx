@@ -1,36 +1,42 @@
-import React from "react";
 import styled from "styled-components";
 import Card from "../../components/Card";
+import { GlobalContext } from "../../Global/shareState";
+import React, { useContext } from "react";
+import { register } from "../../utils/API/api";
 
 const Register = () => {
+  const { email, password, userName } = useContext(GlobalContext);
   return (
-    <Container>
-      <Card
-        req={true}
-        call={false}
-        sign={true}
-        inputTitle="email"
-        inputTitle1="password"
-        path="/signin"
-        route="Sign In"
-        text="Already Have an Account"
-        inputTitle2="confirm password"
-        onClick={() => {
-          console.log("Sanni");
-        }}
-        buttonTitle="Sign Up"
-        title="Sign Up"
-      />
-    </Container>
+    <div>
+      <Main>
+        <Card
+          buttonTitle="Sign up"
+          title="Register"
+          inputTitle="Email"
+          inputTitle1="Password"
+          inputTitle2="User Name"
+          sign={true}
+          request={true}
+          onClick={() => {
+            console.log(" I am");
+            console.log(" I am: ", email, password, userName);
+            register("company/create", { email, password, userName });
+          }}
+          text="Aleady have an Account"
+          route="Sign in Now"
+          path="/signin"
+        />
+      </Main>
+    </div>
   );
 };
 
 export default Register;
 
-const Container = styled.div`
+const Main = styled.div`
   display: flex;
+  height: calc(100vh - 270px);
+  width: 100%;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
 `;

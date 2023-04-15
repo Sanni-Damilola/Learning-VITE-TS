@@ -2,38 +2,40 @@ import React from "react";
 import styled from "styled-components";
 import Card from "../../components/Card";
 
-const Signin = () => {
+const SignIn = () => {
   return (
-    <Container>
-      <Card
-        call={true}
-        req={false}
-        sign={false}
-        path="/register"
-        route="Create One"
-        text="Don't Have an Account"
-        path1="/reset"
-        route1="Request Change here"
-        text1="Forget password?"
-        inputTitle="email"
-        inputTitle1="password"
-        inputTitle2="confirm password"
-        onClick={() => {
-          console.log("Sanni");
-        }}
-        buttonTitle="Sign In"
-        title="Sign In"
-      />
-    </Container>
+    <div>
+      <Main>
+        <Card
+          buttonTitle="Sign in"
+          title="Sign in"
+          inputTitle="Email"
+          inputTitle1="Password"
+          inputTitle2="Confirm"
+          sign={true}
+          request={false}
+          onClick={() => {
+            console.log(" I am");
+          }}
+          text="Don't have an Account"
+          route="Create on Now"
+          path="/register"
+          call={true}
+          text1="Forget your Password"
+          route1="Request change Here"
+          path1="/reset"
+        />
+      </Main>
+    </div>
   );
 };
 
-export default Signin;
+export default SignIn;
 
-const Container = styled.div`
+const Main = styled.div`
   display: flex;
+  height: calc(100vh - 270px);
+  width: 100%;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
 `;

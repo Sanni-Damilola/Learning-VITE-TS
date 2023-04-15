@@ -1,36 +1,41 @@
-import React from "react";
 import styled from "styled-components";
 import Card from "../../components/Card";
 
 const ResetPassword = () => {
   return (
-    <Container>
-      <Card
-        call={true}
-        req={false}
-        sign={false}
-        inputTitle="email"
-        inputTitle1="password"
-        inputTitle2="confirm password"
-        onClick={() => {
-          console.log("Sanni");
-        }}
-        buttonTitle="Reset Password"
-        title="Sign Up"
-        path1="/signin"
-        route1="Sign In"
-        text1="remember? go back to sign in"
-      />
-    </Container>
+    <div>
+      <Main>
+        <Card
+          reg={true}
+          tex={false}
+          textTitle="llll"
+          message="lliii"
+          remake="ppol"
+          buttonTitle="Reset Password"
+          title="Reset Password"
+          inputTitle="Email"
+          inputTitle1="Password"
+          inputTitle2="Confirm"
+          sign={false}
+          request={false}
+          onClick={() => {
+            console.log(" I am");
+          }}
+          text="Ohh, i think i now remember"
+          route="Sign in"
+          path="/signin"
+        />
+      </Main>
+    </div>
   );
 };
 
 export default ResetPassword;
 
-const Container = styled.div`
+const Main = styled.div`
   display: flex;
+  height: calc(100vh - 270px);
+  width: 100%;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
 `;
