@@ -19,11 +19,13 @@ const SignIn = () => {
           }}
           text="Don't have an Account"
           route="Create on Now"
-          path="/register"
+          path="/signup"
           call={true}
           text1="Forget your Password"
           route1="Request change Here"
           path1="/reset"
+          reg={true}
+          tex={false}
         />
       </Main>
     </div>

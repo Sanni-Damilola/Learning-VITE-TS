@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "../../components/Card";
 import { GlobalContext } from "../../Global/shareState";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { register } from "../../utils/API/api";
 
 const Register = () => {
@@ -25,6 +25,8 @@ const Register = () => {
           text="Aleady have an Account"
           route="Sign in Now"
           path="/signin"
+          reg={true}
+          tex={true}
         />
       </Main>
     </div>

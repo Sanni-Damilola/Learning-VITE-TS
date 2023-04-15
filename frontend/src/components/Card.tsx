@@ -132,7 +132,6 @@ const Main = styled.div`
   min-height: 400px;
   border-radius: 10px;
   border: 1px solid gray;
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;

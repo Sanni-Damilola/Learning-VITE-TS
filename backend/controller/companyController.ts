@@ -55,6 +55,7 @@ export const getAllCompany = async (req: Request, res: Response) => {
     console.log("An Error Occured In registerUser", error);
   }
 };
+
 export const deletAllModel = async (req: Request, res: Response) => {
   try {
     const deleteAllModel = await companyModel.deleteMany();

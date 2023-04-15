@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useCompany } from "../../Hook/useCompany";
+// import { useCompany } from "../../Hook/useCompany";
 
 const Home = () => {
-  const [company] = useCompany();
+  // const [company] = useCompany();
 
-  console.log(company);
+  // console.log(company);
 
   return (
     <div>
-      {company.map((props: any) => (
+      {/* {company.map((props: any) => (
         <div key={props._id}>{props?.email}</div>
-      ))}
+      ))} */}
+      yo
     </div>
   );
 };

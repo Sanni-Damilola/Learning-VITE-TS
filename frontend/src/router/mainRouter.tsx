@@ -13,19 +13,19 @@ export const mainRouter = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "",
+        path: "/",
         element: <Home />,
       },
       {
-        path: "register",
+        path: "/signup",
         element: <Register />,
       },
       {
-        path: "signin",
+        path: "/signin",
         element: <SignIn />,
       },
       {
-        path: "reset",
+        path: "/reset",
         element: <ResetPassword />,
       },
     ],
