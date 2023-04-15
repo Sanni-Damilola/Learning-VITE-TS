@@ -11,7 +11,9 @@ const Home = () => {
       <CompanyDetails>
         {company?.map((e: any) => (
           <Data key={e._id}>
-            <b>Email</b> :<i>{e.email}</i>
+            <b>Email</b>👇<i>{e.email}</i> <br />
+            <b>Name</b> 👇<i>{e.name}</i> <br />
+            <b>RCNUMBER</b> 👇<i>{e.rcNumber}</i>
           </Data>
         ))}
       </CompanyDetails>
@@ -35,6 +37,7 @@ const Data = styled.div`
   width: 300px;
   height: 300px;
   margin-top: 30px;
+  flex-direction: column;
   color: white;
   display: flex;
   justify-content: center;
@@ -42,6 +45,10 @@ const Data = styled.div`
   margin: 10px;
   margin-bottom: 30px;
   background-color: purple;
+
+  b {
+    cursor: pointer;
+  }
 
   i {
     margin-left: 6px;
